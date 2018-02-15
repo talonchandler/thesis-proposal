@@ -1,0 +1,519 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{nobel}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a421fda03ad049b7ff6d267f9d10acb1}{%
+           family={Mockl},
+           familyi={M\bibinitperiod},
+           given={Leonhard},
+           giveni={L\bibinitperiod}}}%
+        {{hash=365ad5908d9ab6b46bcf590a8caaf81c}{%
+           family={Lamb},
+           familyi={L\bibinitperiod},
+           given={Don\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=7d205d7f5b1735858b1d3df4e670120f}{%
+           family={Brauchle},
+           familyi={B\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {WILEY-VCH Verlag}%
+      }
+      \strng{namehash}{81223a402734e761bf8c5ce9afe1dc27}
+      \strng{fullhash}{81223a402734e761bf8c5ce9afe1dc27}
+      \strng{authornamehash}{81223a402734e761bf8c5ce9afe1dc27}
+      \strng{authorfullhash}{81223a402734e761bf8c5ce9afe1dc27}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ange. Chem. Int. Ed.}
+      \field{number}{51}
+      \field{title}{Super-resolved Fluorescence Microscopy: Nobel {P}rize in {C}hemistry 2014 for {E}ric {B}etzig, {S}tefan {H}ell, and {W}illiam {E}. {M}oerner}
+      \field{volume}{53}
+      \field{year}{2014}
+      \field{pages}{13972\bibrangedash 13977}
+      \range{pages}{6}
+      \keyw{Nobel Prize,PALM,single molecule detection,STED,super-resolution}
+    \endentry
+    \entry{weiss1999}{article}{}
+      \name{author}{1}{}{%
+        {{hash=089d7683e97875da4e41d7d22e390c36}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{089d7683e97875da4e41d7d22e390c36}
+      \strng{fullhash}{089d7683e97875da4e41d7d22e390c36}
+      \strng{authornamehash}{089d7683e97875da4e41d7d22e390c36}
+      \strng{authorfullhash}{089d7683e97875da4e41d7d22e390c36}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5408}
+      \field{title}{Fluorescence Spectroscopy of Single Biomolecules}
+      \field{volume}{283}
+      \field{year}{1999}
+      \field{pages}{1676\bibrangedash 1683}
+      \range{pages}{8}
+    \endentry
+    \entry{demay2011}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ad42d673c5a950fb37270a7550d81403}{%
+           family={DeMay},
+           familyi={D\bibinitperiod},
+           given={Bradley\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=ab8b486557072809bf52020aa569312b}{%
+           family={Noda},
+           familyi={N\bibinitperiod},
+           given={Naoki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=10e9c2b759fae0e25a77e7144424a9a7}{%
+           family={Gladfelter},
+           familyi={G\bibinitperiod},
+           given={Amy\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
+           family={Oldenbourg},
+           familyi={O\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{343401ddb74659ef33c21fe1e840e94e}
+      \strng{fullhash}{728048915bdc0f54a2289fe54e9967bc}
+      \strng{authornamehash}{343401ddb74659ef33c21fe1e840e94e}
+      \strng{authorfullhash}{728048915bdc0f54a2289fe54e9967bc}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biophys. J.}
+      \field{number}{4}
+      \field{title}{Rapid and Quantitative Imaging of Excitation Polarized Fluorescence Reveals Ordered Septin Dynamics in Live Yeast}
+      \field{volume}{101}
+      \field{year}{2011}
+      \field{pages}{985\bibrangedash 994}
+      \range{pages}{10}
+    \endentry
+    \entry{wu2013}{article}{}
+      \name{author}{13}{}{%
+        {{hash=88e8cfbf50f1e38cc25d675619ea7e2a}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yicong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2da1452f75b34fb0f654759b992aeb1b}{%
+           family={Wawrzusin},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=082df70dae0f64c45d3dce1bbd86d2e4}{%
+           family={Senseney},
+           familyi={S\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3ac61fb133de4d30c3bb5e2cfec61765}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Robert\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=76cee3f65d7f1d984d04c069f855bad4}{%
+           family={Christensen},
+           familyi={C\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0abdae98e8fb425d292e98791333b3fb}{%
+           family={Santella},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=03af21f33af000222e8104732a75f6d5}{%
+           family={York},
+           familyi={Y\bibinitperiod},
+           given={Andrew\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=02262ffed8697d76a8ea15b20f66838d}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e8cfb6bbb08212aa2d3c22e8cf7ee322}{%
+           family={Waterman},
+           familyi={W\bibinitperiod},
+           given={Clare\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1e6a209d53b24ceddc0267e2496fa73f}{%
+           family={Bao},
+           familyi={B\bibinitperiod},
+           given={Zhirong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=dcbdb67e859ea3a150d802ad58bf19b7}{%
+           family={Colon-Ramos},
+           familyi={C\bibinithyphendelim R\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8db6857d206e3a48ccc1cae455b4df3e}{%
+           family={McAuliffe},
+           familyi={M\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=37ce6c04176d0a44d344a61918ddf492}{%
+           family={Shroff},
+           familyi={S\bibinitperiod},
+           given={Hari},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.}%
+      }
+      \strng{namehash}{66565d0ab992b9d552e50ab155678e0d}
+      \strng{fullhash}{7a81e24ae2a0c573609bd53db193b71c}
+      \strng{authornamehash}{66565d0ab992b9d552e50ab155678e0d}
+      \strng{authorfullhash}{7a81e24ae2a0c573609bd53db193b71c}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nat. Biotechnol.}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Spatially isotropic four-dimensional imaging with dual-view plane illumination microscopy}
+      \field{volume}{31}
+      \field{year}{2013}
+      \field{pages}{1032\bibrangedash 1038}
+      \range{pages}{7}
+    \endentry
+    \entry{levoy2006}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=1315bf00f5fa82534be18df443fc255c}{%
+           family={Levoy},
+           familyi={L\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=96e30bdc2cf905aa1109c46617b16252}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Ren},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d9920ffa161bb88a78dfee84636fb7be}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=053e0c8923403e036373bb4ec8ea63c6}{%
+           family={Footer},
+           familyi={F\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2c9d1aa766759ce8abffd16d2a35689e}{%
+           family={Horowitz},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{9f77a80a85740c10807604d5f76a7398}
+      \strng{fullhash}{46ec586973aa99aa58a5d7e1b8cc6e0f}
+      \strng{authornamehash}{9f77a80a85740c10807604d5f76a7398}
+      \strng{authorfullhash}{46ec586973aa99aa58a5d7e1b8cc6e0f}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM SIGGRAPH 2006 Papers}
+      \field{journaltitle}{SIGGRAPH '06}
+      \field{title}{Light Field Microscopy}
+      \field{year}{2006}
+      \field{pages}{924\bibrangedash 934}
+      \range{pages}{11}
+      \keyw{deconvolution,light fields,microscopy,synthetic aperture,tomography,volume rendering}
+    \endentry
+    \entry{chandler17}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ca817a43a6798f657f69b8d86a7e394c}{%
+           family={Chandler},
+           familyi={C\bibinitperiod},
+           given={Talon},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4b6c83c54b055431a9da50f532edff83}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Shalin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=37ce6c04176d0a44d344a61918ddf492}{%
+           family={Shroff},
+           familyi={S\bibinitperiod},
+           given={Hari},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
+           family={Oldenbourg},
+           familyi={O\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ed1e9c5728d61fb0ee066d8e0b0209e1}{%
+           family={La\bibnamedelima Rivi\`{e}re},
+           familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Patrick\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {OSA}%
+      }
+      \strng{namehash}{95a5a8152a617241615d940dc72c78c3}
+      \strng{fullhash}{2b608571007424f4acf803f179ad0e94}
+      \strng{authornamehash}{95a5a8152a617241615d940dc72c78c3}
+      \strng{authorfullhash}{2b608571007424f4acf803f179ad0e94}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Opt. Express}
+      \field{month}{12}
+      \field{number}{25}
+      \field{title}{Single-fluorophore orientation determination with multiview polarized illumination: modeling and microscope design}
+      \field{volume}{25}
+      \field{year}{2017}
+      \field{pages}{31309\bibrangedash 31325}
+      \range{pages}{17}
+      \keyw{Imaging systems; Microscopy; Fluorescence microscopy; Three-dimensional microscopy; Polarization; Polarization-selective devices}
+    \endentry
+    \entry{schmid}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=7ddbfd2d922864640ee5d46ad7d488c2}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Eva\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7497920b3fef6b85121f155033740cc5}{%
+           family={Richmond},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=48c3f27229d457546b37111d1ba77ba5}{%
+           family={Fletcher},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=9b457336538c420bbf9979e1a34fcb7f}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e317e24f79c687978cd0c538bb53786d}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Wallace\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{682bf1c648508efd6f2856a6d6d87258}
+      \strng{fullhash}{682bf1c648508efd6f2856a6d6d87258}
+      \strng{authornamehash}{682bf1c648508efd6f2856a6d6d87258}
+      \strng{authorfullhash}{682bf1c648508efd6f2856a6d6d87258}
+      \strng{editornamehash}{9accda8d7fd8679b21244d7e28703be2}
+      \strng{editorfullhash}{9accda8d7fd8679b21244d7e28703be2}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Building a Cell from its Component Parts}
+      \field{journaltitle}{Methods in Cell Biology}
+      \field{title}{Chapter 17 - Reconstitution of proteins on electroformed giant unilamellar vesicles}
+      \field{volume}{128}
+      \field{year}{2015}
+      \field{pages}{319\bibrangedash 338}
+      \range{pages}{20}
+      \keyw{Electroformation,Lipid bilayer,Liposome,Membrane protein,Membrane reconstitution,Protein\x{fffd}\x{fffd}\x{fffd}membrane interaction,Vesicle,Video protocol}
+    \endentry
+    \entry{mehta2016}{article}{}
+      \name{author}{8}{}{%
+        {{hash=18c48853dc0bf8f33fbd5f02087ebbe1}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Shalin\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d5bf7a7233c3d5545c65a0625b448caf}{%
+           family={McQuilken},
+           familyi={M\bibinitperiod},
+           given={Molly},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ed1e9c5728d61fb0ee066d8e0b0209e1}{%
+           family={La\bibnamedelima Rivi\`{e}re},
+           familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Patrick\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b14467a3150f96813894e376b90d6381}{%
+           family={Occhipinti},
+           familyi={O\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aa490ec861202d1c629da557ef8eaa69}{%
+           family={Verma},
+           familyi={V\bibinitperiod},
+           given={Amitabh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
+           family={Oldenbourg},
+           familyi={O\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=10e9c2b759fae0e25a77e7144424a9a7}{%
+           family={Gladfelter},
+           familyi={G\bibinitperiod},
+           given={Amy\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1ec4d05fa592288e2566796e45a3f3bc}{%
+           family={Tani},
+           familyi={T\bibinitperiod},
+           given={Tomomi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c20fde9742567898db3bdb9357342e01}
+      \strng{fullhash}{0597ca444100033a6510d8b2af6b541d}
+      \strng{authornamehash}{c20fde9742567898db3bdb9357342e01}
+      \strng{authorfullhash}{0597ca444100033a6510d8b2af6b541d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. Natl. Acad. Sci. U.S.A.}
+      \field{number}{42}
+      \field{title}{Dissection of molecular assembly dynamics by tracking orientation and position of single molecules in live cells}
+      \field{volume}{113}
+      \field{year}{2016}
+      \field{pages}{E6352\bibrangedash E6361}
+      \range{pages}{-1}
+    \endentry
+    \entry{toprak2006}{article}{}
+      \name{author}{8}{}{%
+        {{hash=5b9ab0bf21d1b34d62e653a980018762}{%
+           family={Toprak},
+           familyi={T\bibinitperiod},
+           given={Erdal},
+           giveni={E\bibinitperiod}}}%
+        {{hash=879dface198bf478394b6a0be5e9e947}{%
+           family={Enderlein},
+           familyi={E\bibinitperiod},
+           given={Joerg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=28512205c4e0141a7b6b0b9e72860de7}{%
+           family={Syed},
+           familyi={S\bibinitperiod},
+           given={Sheyum},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a2d1e0cf1dc79d2cf54bff64e2164352}{%
+           family={McKinney},
+           familyi={M\bibinitperiod},
+           given={Sean\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a2f4ce66315f4d418a0cbea10fab648a}{%
+           family={Petschek},
+           familyi={P\bibinitperiod},
+           given={Rolfe\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=75e1fcd4698f185071551719ab46c870}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Taekjip},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3fe3467601e1d2b376acc4d5f8f7e4a1}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Yale\bibnamedelima E.},
+           giveni={Y\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=369a4b9ecb1446d986a287d253cc905f}{%
+           family={Selvin},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{1c88c26c29126049857d1644027c5ffd}
+      \strng{fullhash}{71181d4ed1d824dade5396106acbbe0b}
+      \strng{authornamehash}{1c88c26c29126049857d1644027c5ffd}
+      \strng{authorfullhash}{71181d4ed1d824dade5396106acbbe0b}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{17}
+      \field{title}{Defocused orientation and position imaging ({DOPI}) of myosin {V}}
+      \field{volume}{103}
+      \field{year}{2006}
+      \field{pages}{6495\bibrangedash 6499}
+      \range{pages}{5}
+    \endentry
+    \entry{nov2006}{book}{}
+      \name{author}{2}{}{%
+        {{hash=68c8b1fe3e055fe3c71ca1ee6554b509}{%
+           family={Novotny},
+           familyi={N\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=77427840f5c77e8bf6cda32554acb7b8}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Bert},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{4d6e90d778475dccacd79183e2f10152}
+      \strng{fullhash}{4d6e90d778475dccacd79183e2f10152}
+      \strng{authornamehash}{4d6e90d778475dccacd79183e2f10152}
+      \strng{authorfullhash}{4d6e90d778475dccacd79183e2f10152}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principles of Nano-Optics}
+      \field{year}{2006}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
