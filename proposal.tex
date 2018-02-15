@@ -1,13 +1,15 @@
-\documentclass[12pt]{article}
+\documentclass[11pt, draft]{article}
 \usepackage{lipsum,mathptmx,etoolbox}
 \usepackage[american]{babel}
 \usepackage[backend=biber, maxbibnames=100, style=ieee]{biblatex}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv}
 \usepackage{pgfgantt}
 \usepackage{amsmath,amssymb}
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{pifont}
-\usepackage{caption}
+\usepackage[font={small}]{caption}
 \usepackage{float}
 \usepackage{xcolor}
 \newcommand{\cmark}{\textcolor{green!60!black}{\ding{51}}}
@@ -26,8 +28,8 @@
 \usepackage[
 top    = 1.87cm,
 bottom = 1.87cm,
-left   = 1.87cm,
-right  = 1.87cm]{geometry}
+left   = 1.27cm,
+right  = 1.27cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
@@ -37,8 +39,6 @@ right  = 1.87cm]{geometry}
 \cfoot{}
 \rfoot{\thepage}
 \hyphenpenalty=1000
-\linespread{1.1}
-
 \begin{document}
 \section*{Specific Aims}
 Fluorescence microscopy is an extremely valuable tool in
@@ -253,7 +253,7 @@ help us verify the results of our reconstructions.
 
 \begin{figure}[t]
 \centering
-  \includegraphics[width=0.85\textwidth, interpolate=true, trim={6em 4em 2em 0em}]{figs/inset}
+  \includegraphics[width=0.65\textwidth, interpolate=true, trim={6em 4em 2em 0em}]{figs/inset}
   \caption{Orientation reconstruction of a 68$\times$108$\times$46 $\mu$m${}^3$
     volume of fixed cells stained with Alexa Fluor 488 Phalloidin and imaged
     with an asymmetric 1.1/0.71 NA dual-view light-sheet microscope. We assign a
@@ -371,19 +371,22 @@ biological application in coming months.
 
 \subsection*{Timeline}
 \begin{table}[H]
-  \hspace{-1em}
+%  \hspace{-1em}
 \begin{ganttchart}[%Specs
      y unit title=0.5cm,
-     y unit chart=0.7cm,
+     y unit chart=0.5cm,
      vgrid,hgrid,
      title height=1,
-     title label font=\bfseries\footnotesize,
+     title label font=\bfseries\small,
      bar/.style={fill=gray},
-     bar height=0.5,
+     bar height=0.4,
+     group left shift=0,
      group right shift=0,
-     group top shift=0.7,
-     group height=.2,
-     group peaks width={0.2},
+     group top shift=0.2,
+     group height=.4,
+     group peaks width={0.1},
+     group peaks tip position={0},
+     group peaks height={0.1},     
      inline]{1}{24}
     \gantttitle[]{2018}{9}
     \gantttitle[]{2019}{12} 
@@ -412,8 +415,8 @@ biological application in coming months.
 
     \ganttgroup[inline=false]{Aim 3: Live-cell demonstration}{4}{21} \\ 
     \ganttbar[inline=false]{Identify research question}{4}{12} \\
-    \ganttbar[inline=false]{Investigate research question}{10}{21} \\ \\
-    \ganttbar[inline=false]{\textbf{Thesis}}{22}{24} \\
+    \ganttbar[inline=false]{Investigate research question}{10}{21} \\
+    \ganttbar[inline=false]{\textbf{Thesis}}{22}{24}
   \end{ganttchart}
   \caption{Proposed project timeline.}
   \end{table}
