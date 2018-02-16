@@ -40,7 +40,7 @@ right  = 1.27cm]{geometry}
 \rhead{Talon Chandler}
 \cfoot{}
 \rfoot{\thepage}
-\hyphenpenalty=1000
+\hyphenpenalty=0
 \begin{document}
 \section*{Specific Aims}
 Fluorescence microscopy is an extremely valuable tool in biology---by
@@ -52,20 +52,22 @@ microscopes to achieve resolutions below the diffraction limit, which has
 enabled new biological insights \cite{nobel}.
 
 In addition to the position of fluorophores, the \textit{orientation} of
-fluorophores can report biological processes as well \cite{weiss1999}. Single
-fluorophores that are attached to fixed structures absorb and emit light like
-\textit{dipoles}---they absorb and emit polarized light anisotropically---so
-their orientation can be measured using polarized light
-microscopes. Unfortunately, current techniques can only measure the transverse
-orientation of fluorophores in relatively thin specimens. These constraints
-severely limit the number of biological questions that can be answered using
-available orientation measurement techniques. In this work we propose the use of
-polarized multiview microscopes to measure the three-dimensional orientation of
-fluorophores in thick living specimens. We believe that this class of techniques
-will enable new insights in structural and functional biology.
+fluorophores can report on biological processes \cite{weiss1999}. Single
+fluorophores absorb and emit light like \textit{dipoles}---they absorb and emit
+polarized light anisotropically---so their orientation can be measured using
+polarized light microscopes. If these fluorophores are rigidly attached to
+molecules of interest, then the fluorophores can provide valuable information on
+the orientation of those molecules. Unfortunately, current techniques can only
+measure the transverse orientation of fluorophores in relatively thin
+specimens. These constraints severely limit the number of biological questions
+that can be answered using available orientation measurement techniques. In this
+work we propose the use of polarized multiview microscopes to measure the
+three-dimensional orientation of fluorophores in thick living specimens. We
+believe that this class of techniques will enable new insights in structural and
+functional biology.
 
 \noindent\textbf{Scientific Premise:} Three-dimensional fluorescence orientation
-microscopy is a valuable tool for investigating structural and functional
+microscopy will be a valuable tool for investigating structural and functional
 biology in living cells. This can be achieved using novel multiview
 polarization-sensitive microscopes and algorithms for estimating
 three-dimensional molecular orientations from such datasets.
@@ -98,14 +100,14 @@ orientation microscopy for live-cell biology.
 
 Our overarching goal is to develop useful tools that will enable biological
 discovery. To achieve this goal we will work directly with biologists who will
-propose specific questions and experiments for the techniques we are
-proposing. We expect that these interactions will inform and redirect our work
-in ways that will improve the likelihood of biological discovery.
+propose specific questions and experiments that can exploit the techniques we
+are proposing. We expect that these interactions will inform and redirect our
+work in ways that will improve the likelihood of biological discovery.
 
-Upon completion, this project will produce a new set of techniques that
-biologists can use to investigate fundamental biological questions. These
-techniques will help improve our understanding of basic cell biology and
-eventually human health.
+Upon completion, this project will produce a new set of validated hardware and
+algorithms for determining three-dimensional molecular orientation in living
+samples using multiview polarized light microscopy. These techniques will help
+improve our understanding of basic cell biology and eventually human health.
 
 \pagebreak
 
@@ -162,11 +164,12 @@ known way, then we can infer \parfillskip=0pt\par}
     microscopes.}
   \label{fig:comparison}
 \end{figure}
-\noindent the orientation of the structure from the estimated
-dipole axis. The monopole approximation is valid in many practical cases---when
-the object contains many fluorophores or fluorophores that are rotating
-rapidly---but the complete dipole model is necessary when the object contains
-few fluorophores or fluorophores that are constrained to specific orientations.
+\noindent the orientation of the structure from the estimated dipole axis. The
+monopole approximation is valid in many practical cases---when the object
+contains many randomly oriented fluorophores per resolution element or
+fluorophores that are rotating rapidly---but the complete dipole model is
+necessary when the object contains few fluorophores or fluorophores that are
+constrained to specific orientations.
 
 Typical fluorescence microscopes are only capable of measuring the position of
 fluorophores, but by adding \textit{polarizing filters} we can make a
@@ -184,19 +187,19 @@ We have completed a theoretical investigation of orientation microscopy with a
 focus on multiview polarized light microscopes
 \cite{chandler17}. Figure~\ref{fig:comparison} shows our main result---dual-view
 microscopes can measure the orientation of fluorophores with fewer degeneracies
-and less uncertainty than single-view microscopes. These results show
+and less uncertainty than single-view microscopes. These results show that
 three-dimensional fluorophore orientation measurements are possible with dual-
 and multiview microscopes.
 
 Using polarized multiview light microscopy to measure the three dimensional
 orientation of fluorophores offers a new window into cell biology. Cell
 biologists regularly label dynamic oriented structures to watch these structures
-evolve---actin networks in mobile cells, septin networks in growing cells, and
-motor proteins for intracellular transport to name a few---but current
-techniques limit them to investigating two-dimensional behaviors. Real cells
-live and behave in three dimensions, so investigating their three-dimensional
-structure is essential if we want to draw biological and health-related
-conclusions.
+evolve---actin networks in mobile cells \cite{mehta2016}, septin networks in
+growing cells \cite{demay2011}, and motor proteins for intracellular transport
+\cite{forkey2003} to name a few---but current techniques limit them to
+investigating two-dimensional behaviors. Real cells live and behave in three
+dimensions, so investigating their three-dimensional structure is essential if
+we want to draw biological and health-related conclusions.
 
 \begin{table}[t]
   \centering
@@ -446,7 +449,7 @@ sample using existing two-dimensional techniques, and we will verify our
 three-dimensional techniques using this sample. We expect orientation agreement
 between the known sample and reconstructions within 5$^{\circ}$ for all
 fluorophore orientations. We also expect spatial resolution within 2 times the
-diffraction limit for each microscope.
+theoretical diffraction limit for each microscope.
 
 \noindent\textbf{Potential complications:} We expect initial disagreement
 between our results and our known samples due to our use of simplified linear
