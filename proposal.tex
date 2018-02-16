@@ -10,6 +10,8 @@
 \usepackage{booktabs}
 \usepackage{pifont}
 \usepackage[font={small}]{caption}
+%\usepackage{floatrow}
+%\usepackage[export]{adjustbox}
 \usepackage{float}
 \usepackage{xcolor}
 \newcommand{\cmark}{\textcolor{green!60!black}{\ding{51}}}
@@ -41,17 +43,16 @@ right  = 1.27cm]{geometry}
 \hyphenpenalty=1000
 \begin{document}
 \section*{Specific Aims}
-Fluorescence microscopy is an extremely valuable tool in
-biology---by introducing a fluorescent probe into a live organism and measuring
-the position of the probe, researchers can watch cellular processes as they
-occur. An extraordinary amount of effort has been expended towards improving the
-spatial resolution of fluorescence microscopes, and recent breakthroughs have
-allowed microscopes to achieve resolutions below the diffraction limit which has
+Fluorescence microscopy is an extremely valuable tool in biology---by
+introducing a fluorescent probe into a live organism and measuring the position
+of the probe, researchers can watch cellular processes as they occur. An
+extraordinary amount of effort has been expended towards improving the spatial
+resolution of fluorescence microscopes, and recent breakthroughs have allowed
+microscopes to achieve resolutions below the diffraction limit, which has
 enabled new biological insights \cite{nobel}.
 
-Position is not the only property of fluorophores that can report on biological
-processes, though. Early studies have shown that the \textit{orientation} of
-fluorophores can report valuable information as well \cite{weiss1999}. Single
+In addition to the position of fluorophores, the \textit{orientation} of
+fluorophores can report biological processes as well \cite{weiss1999}. Single
 fluorophores that are attached to fixed structures absorb and emit light like
 \textit{dipoles}---they absorb and emit polarized light anisotropically---so
 their orientation can be measured using polarized light
@@ -63,9 +64,11 @@ polarized multiview microscopes to measure the three-dimensional orientation of
 fluorophores in thick living specimens. We believe that this class of techniques
 will enable new insights in structural and functional biology.
 
-\noindent\textbf{Hypothesis:} Three-dimensional fluorescence orientation microscopy is a
-valuable tool for investigating structural and functional biology in living
-cells.
+\noindent\textbf{Scientific Premise:} Three-dimensional fluorescence orientation
+microscopy is a valuable tool for investigating structural and functional
+biology in living cells. This can be achieved using novel multiview
+polarization-sensitive microscopes and algorithms for estimating
+three-dimensional molecular orientations from such datasets.
 
 \noindent\textbf{Aim 1:} Develop a signal processing pipeline for analyzing and visualizing polarized multiview fluorescence microscopy data.
 
@@ -75,7 +78,7 @@ processing pipeline that can efficiently reconstruct fluorophore orientations
 from polarized multiview fluorescence microscopy data. An essential piece of
 this pipeline is the spherical Fourier transform---by analyzing the data in the
 angular frequency domain we can reconstruct fluorescence orientations much more
-efficiently that existing techniques.
+efficiently than existing techniques.
 
 \noindent\textbf{Aim 2:} Demonstrate and verify three-dimensional fluorescence
 orientation microscopy using a dual-view light-sheet microscope and a
@@ -99,32 +102,103 @@ propose specific questions and experiments for the techniques we are
 proposing. We expect that these interactions will inform and redirect our work
 in ways that will improve the likelihood of biological discovery.
 
+Upon completion, this project will produce a new set of techniques that
+biologists can use to investigate fundamental biological questions. These
+techniques will help improve our understanding of basic cell biology and
+eventually human health.
+
 \pagebreak
 
 \section*{Research Strategy}
-\subsection*{Background}
+\subsection*{Significance}
 A \textit{fluorescence microscope} is an optical imaging system that can measure
 the position of fluorescent objects with a resolution of 1 $\mu$m or better.
 Fluorescence microscopes excite fluorophores in a sample using short-wavelength
-light and detect the long-wavelength light that the fluorophores emit as they
+light and detect the longer-wavelength light that the fluorophores emit as they
 relax. By focusing the emitted light onto a plane detector using a series of
 lenses, a fluorescence microscope creates a two-dimensional image of the
 fluorophores in a sample.
 
-Fluorescence microscopes image fluorescent samples, so how can we attain a
-fluorescent sample? \textit{(1)~Find fluorescent samples in nature.} Most
+Fluorescence microscopes image fluorescent samples which arise in three
+principal ways. \textit{(1)~Endogenous fluorescent samples in nature.} Most
 organisms create fluorescent molecules naturally. Chlorophyll, collagen, and
 melanin are examples of fluorescent molecules that are found in many plants and
-animals. \textit{(2)~Add a fluorescent dye to a sample.}  There are hundreds of
-commercially-available fluorescent dyes that can be introduced into a
-sample. Researchers can choose a dye that will bind to a structure or process
-that they are interested in studying.\hspace{0.4em}\textit{(3)~Genetically
-  modify an organism so that it creates fluorescent proteins.} Many organisms
-can be genetically modified so that a specific protein of interest displays
-fluorescence. These techniques can be used to image almost any biological
-process that involves proteins.
+animals. \textit{(2)~Through addition of a fluorescent dye to a sample.}  There
+are hundreds of commercially available fluorescent dyes that can be introduced
+into a sample. Researchers can choose a dye that will bind to a structure or
+process that they are interested in
+studying.\hspace{0.4em}\textit{(3)~By genetically modifying an organism so that it
+  creates fluorescent proteins.} Many organisms can be genetically modified so
+that a specific protein of interest displays fluorescence. These techniques can
+be used to image almost any biological process that involves proteins.
 
-\begin{table}[b]
+{Most fluorescence microscope models treat fluorophores as \textit{monopole
+  absorbers} and \textit{monopole emitters}, but in reality most
+fluorophores---including the widely used fluorophore green fluorescent protein
+(GFP)---behave like \textit{dipole absorbers} and \textit{dipole emitters}. This
+is an important difference. Monopoles absorb and emit all polarization states of
+light isotropically while dipoles absorb and emit light in specific polarization
+states anisotropically. By sampling the anisotropic absorption and emission
+patterns of a fluorophore we can estimate the \textit{dipole axis} of the
+fluorophore. If the fluorophore is rigidly attached to an oriented structure in a
+known way, then we can infer \parfillskip=0pt\par}
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.8\textwidth, interpolate=true, trim={0em 0em 0em 0em}]{figs/proposal-fig}
+  \caption{\textbf{Column 1:} Microscope schematics---arrows indicate polarized
+    illumination orientations, solid lines indicate illumination numerical
+    aperture (NA), dashed lines indicate detection NA, and each color indicates
+    a single illumination and detection path. \textbf{Column 2:} Uncertainty
+    ellipses show the relative orientation uncertainty for single molecules
+    along different directions. \textbf{Column 3:} The solid-angle uncertainty
+    [sr] shows the absolute orientation uncertainty in all directions. All
+    uncertainties are for the ideal case of a fixed single dipole---motion,
+    self-interaction (homo-FRET), and higher order radiation moments will
+    increase the true uncertainty. \textbf{Row 1:} 0.8 NA single-view
+    four-polarization epi-illumination microscope. \textbf{Row 2:} 0.8 NA
+    orthogonal dual-view eight-polarization microscope. From columns 2 and 3 we
+    can see that dual-view microscopes can estimate the orientation of
+    fluorophores with fewer degeneracies and less uncertainty than single-view
+    microscopes.}
+  \label{fig:comparison}
+\end{figure}
+\noindent the orientation of the structure from the estimated
+dipole axis. The monopole approximation is valid in many practical cases---when
+the object contains many fluorophores or fluorophores that are rotating
+rapidly---but the complete dipole model is necessary when the object contains
+few fluorophores or fluorophores that are constrained to specific orientations.
+
+Typical fluorescence microscopes are only capable of measuring the position of
+fluorophores, but by adding \textit{polarizing filters} we can make a
+fluorescence microscope sensitive to the anisotropic absorption and emission
+patterns of fluorophores. If we place a polarizing filter in the excitation
+light path, then the light that is incident on the sample is polarized and it
+selectively excites fluorophores with dipole axes parallel to the light's
+polarization. If we place a polarizing filter in the detection path, then we
+selectively detect fluorophores with dipole axes parallel to the detected
+polarization. By collecting images under several polarizing filter orientations
+and applying a reconstruction scheme, we can estimate the position and
+orientation of fluorophores in a sample.
+
+We have completed a theoretical investigation of orientation microscopy with a
+focus on multiview polarized light microscopes
+\cite{chandler17}. Figure~\ref{fig:comparison} shows our main result---dual-view
+microscopes can measure the orientation of fluorophores with fewer degeneracies
+and less uncertainty than single-view microscopes. These results show
+three-dimensional fluorophore orientation measurements are possible with dual-
+and multiview microscopes.
+
+Using polarized multiview light microscopy to measure the three dimensional
+orientation of fluorophores offers a new window into cell biology. Cell
+biologists regularly label dynamic oriented structures to watch these structures
+evolve---actin networks in mobile cells, septin networks in growing cells, and
+motor proteins for intracellular transport to name a few---but current
+techniques limit them to investigating two-dimensional behaviors. Real cells
+live and behave in three dimensions, so investigating their three-dimensional
+structure is essential if we want to draw biological and health-related
+conclusions.
+
+\begin{table}[t]
   \centering
   \begin{tabularx}{1\textwidth}{r *{4}{Y}}
     \toprule
@@ -145,31 +219,6 @@ Large field of view & \cmark & \cmark & \cmark\cmark & \cmark \\
 \end{tabularx}
   \caption{Comparison of existing and proposed fluorescence orientation microscopy techniques.}
 \end{table}
-
-Most fluorescence microscope models treat fluorophores as \textit{monopole
-  absorbers} and \textit{monopole emitters}. These are valid approximations when
-the fluorescent object contains many fluorophores that are rotating rapidly, but
-in reality most fluorophores---including the widely used fluorophore, green
-fluorescent protein (GFP)---behave like \textit{dipole absorbers} and
-\textit{dipole emitters}. This is an important difference. Monopoles absorb and
-emit all polarization states of light isotropically while dipoles absorb and
-emit light in specific polarization states anisotropically. By sampling the
-anisotropic absorption and emission patterns of a fluorophore we can estimate
-the \textit{dipole axis} of the fluorophore. If the fluorophore is rigidly
-attached to an oriented structure in a known way, then we can infer the
-orientation of the structure from the estimated dipole axis.
-
-Typical fluorescence microscopes are only capable of measuring the position of
-fluorophores, but by adding \textit{polarizing filters} we can make a
-fluorescence microscope sensitive to the anisotropic absorption and emission
-patterns of fluorophores. If we place a polarizing filter in the excitation
-light path, then the light that is incident on the sample is polarized and it
-selectively excites fluorophores with dipole axes parallel to the light's
-polarization. If we place a polarizing filter in the detection path, then we
-selectively detect fluorophores with dipole axes parallel to the detected
-polarization. By collecting images under several polarizing filter orientations
-and applying a reconstruction scheme, we can estimate the position and
-orientation of fluorophores in a sample.
 
 \subsection*{Innovation}
 Table 1 summarizes state-of-the-art techniques for measuring the orientation of
@@ -248,68 +297,30 @@ proposed light-field approach has poorer resolution than the dual-view
 light-sheet approach, the light-field approach is extremely fast and gentle, and
 it will allow us to study fast-moving processes for long periods.
 
-\subsection*{Preliminary Results}
-\begin{figure}[t]
-\centering
-  \includegraphics[width=0.8\textwidth, interpolate=true, trim={0em 0em 0em 0em}]{figs/proposal-fig}
-  \caption{\textbf{Column 1:} Microscope schematics---arrows indicate polarized
-    illumination orientations, solid lines indicate illumination NA, dashed
-    lines indicate detection NA, and each color indicates a single illumination
-    and detection path. \textbf{Column 2:} Uncertainty ellipses show the
-    relative orientation uncertainty for single molecules along different
-    directions. \textbf{Column 3:} The solid-angle uncertainty [sr] shows the
-    absolute orientation uncertainty in all directions. All uncertainties are
-    for the ideal case of a fixed single dipole---motion, homo-FRET, and higher
-    order radiation moments will increase the true uncertainty. \textbf{Row 1:}
-    0.8 NA single-view four-polarization epi-illumination
-    microscope. \textbf{Row 2:} 0.8 NA orthogonal dual-view eight-polarization
-    microscope. From columns 2 and 3 we can see that dual-view microscopes can
-    estimate the orientation of fluorophores with fewer degeneracies and less
-    uncertainty than single-view microscopes.}
-  \label{fig:comparison}
-\end{figure}
-We have completed a theoretical study that investigates the limits of
-orientation microscopy and the advantages of using multiple views
-\cite{chandler17}. Figure~\ref{fig:comparison} shows our main result---dual-view
-microscopes can measure the orientation of fluorophores with less fewer
-degeneracies and less uncertainty than single-view microscopes. We also
-developed a set of practical design heuristics that we will apply to the design
-of our microscopes. In particular, we found that there is an optimal numerical
-aperture for measuring the orientation of fluorophores---small apertures do not
-collect enough photons and large apertures cannot distinguish between
-fluorophores in different orientations. This result contradicts conventional
-design wisdom in microscopy---increasing the numerical aperture improves
-collection efficiency and spatial resolution, so conventional designers buy the
-highest numerical aperture objective they can afford.
-
-We have started to collect preliminary data with a polarized dual-view
-light-sheet microscope. In our first study we imaged fixed cells stained with
-Alexa Fluor 488 Phalloidin---a fluorescent dye that is known to attach parallel
-to long actin fibers in the cells.  Figure~\ref{fig:recon} shows a prototype
-three-dimensional orientation reconstruction using a simplified model applied to
-real data. The results match our expectations---the reconstructed orientations
-align with the long axes of the actin fibers.
-
-Finally, we have collected preliminary images of several test specimens with
-known fluorophore position and orientation including oriented fluorescent fibers
-and giant unilamellar vesicles. These test specimens will be essential tools to
-help us verify the results of our reconstructions.
-
-\begin{figure}[t]
-\centering
-  \includegraphics[width=0.65\textwidth, interpolate=true, trim={6em 4em 2em 0em}]{figs/inset}
-  \caption{Orientation reconstruction of a 68$\times$108$\times$46 $\mu$m${}^3$
-    volume of fixed cells stained with Alexa Fluor 488 Phalloidin and imaged
-    with an asymmetric 1.1/0.71 NA dual-view light-sheet microscope. We assign a
-    scaled and oriented glyph to each voxel to indicate the quantity and
-    orientation of fluorophores in that voxel. The inset shows two crossed actin
-    fibers, and our reconstructed orientations are aligned with the long axes of these
-    fibers as expected.}
-  \label{fig:recon}
-\end{figure}
-
-
 \subsection*{Approach}
+\begin{figure}
+\centering
+\begin{minipage}{.45\textwidth}
+  \centering
+  \vspace{-20pt}
+  \includegraphics[width=\textwidth, interpolate=true, trim={0em 8em 0em 0em}]{figs/sph_harm}
+  \vspace{-30pt}
+  \caption{The spherical harmonic functions form an orthonormal basis for functions on the sphere. Red = positive, blue = negative.} 
+  \label{fig:sph1}
+\end{minipage}%
+\hspace{0.75em}
+\begin{minipage}{.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth, interpolate=true]{figs/svs_dispim}
+  \captionof{figure}{The angular singular value spectrum of a polarized
+    dual-view selective plane microscope. In the same way that the modulation
+    transfer function (MTF) characterizes the ability of an imaging system to
+    transfer spatial harmonics, the angular singular value spectrum measures the
+    ability of an imaging system to transfer spherical harmonics.}
+  \label{fig:sph2}
+\end{minipage}
+\end{figure}
+
 \noindent\textbf{Aim 1:} Develop a signal processing pipeline for analyzing and
   visualizing polarized multiview fluorescence microscopy data.
 
@@ -374,29 +385,6 @@ orientation microscopes is an integral over position and orientation, and our
 approximation only applies to special cases. We plan to extend our models to
 consider these issues, and we plan to apply joint spatio-angular restorations to
 the data.
-  
-\begin{figure}
-\centering
-\begin{minipage}{.45\textwidth}
-  \centering
-  \vspace{-20pt}
-  \includegraphics[width=\textwidth, interpolate=true, trim={0em 8em 0em 0em}]{figs/sph_harm}
-  \vspace{-30pt}
-  \caption{The spherical harmonic functions form an orthonormal basis for functions on the sphere. Red = positive, blue = negative.} 
-  \label{fig:sph1}
-\end{minipage}%
-\hspace{0.75em}
-\begin{minipage}{.45\textwidth}
-  \centering
-  \includegraphics[width=\textwidth, interpolate=true]{figs/svs_dispim}
-  \captionof{figure}{The angular singular value spectrum of a polarized
-    dual-view selective plane microscope. In the same way that the modulation
-    transfer function (MTF) characterizes the ability of an imaging system to
-    transfer spatial harmonics, the angular singular value spectrum measures the
-    ability of an imaging system to transfer spherical harmonics.}
-  \label{fig:sph2}
-\end{minipage}
-\end{figure}
 
 \noindent\textbf{Expected outcome:} A set of software tools that can be used
 to reconstruct, visualize, and understand fluorophore orientations from data
@@ -424,11 +412,41 @@ several samples for this purpose---PBT
 [poly(1,4-phenylene-2,6-benzo-bis-thiazole)] film, giant unilamellar vesicles
 \cite{schmid}, and actin networks.
 
+We have started to collect preliminary data with a polarized dual-view
+light-sheet microscope imaging actin networks. In our first study we imaged
+fixed cells stained with Alexa Fluor 488 Phalloidin---a fluorescent dye that is
+known to attach parallel to long actin fibers in the cells.
+Figure~\ref{fig:recon} shows a prototype three-dimensional orientation
+reconstruction using a simplified model applied to real data. The results match
+our expectations---the reconstructed orientations align with the long axes of
+the actin fibers.
+
+\begin{figure}[t]
+  \begin{minipage}[c]{0.7\textwidth}
+    \includegraphics[width=\textwidth, trim={3em 0em 0em 0em}]{figs/inset}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.25\textwidth}
+    \vspace{-1em}
+    \caption{Orientation reconstruction of a 68$\times$108$\times$46 $\mu$m${}^3$
+    volume of fixed cells stained with Alexa Fluor 488 Phalloidin and imaged
+    with an asymmetric 1.1/0.71 NA dual-view light-sheet microscope. We assign a
+    scaled and oriented glyph to each voxel to indicate the quantity and
+    orientation of fluorophores in that voxel. The inset shows two crossed actin
+    fibers, and our reconstructed orientations are aligned with the long axes of these
+    fibers as expected.
+    } \label{fig:recon}
+  \end{minipage}
+\vspace{-5em}  
+\end{figure}
+
 \noindent\textbf{Expected outcomes:} Clear evidence that our microscopes and
 reconstruction techniques can reconstruct the position and orientation of
 fluorophores. We will verify the position and orientation of fluorophores in a
 sample using existing two-dimensional techniques, and we will verify our
-three-dimensional techniques using this sample.
+three-dimensional techniques using this sample. We expect orientation agreement
+between the known sample and reconstructions within 5$^{\circ}$ for all
+fluorophore orientations. We also expect spatial resolution within 2 times the
+diffraction limit for each microscope.
 
 \noindent\textbf{Potential complications:} We expect initial disagreement
 between our results and our known samples due to our use of simplified linear
@@ -443,10 +461,16 @@ Biological Laboratory to find applications for our techniques. We have already
 identified several promising areas where the orientation of fluorophores in
 three dimensions could report useful information:
 \begin{itemize}
-\item Cellular migration---the dynamics of actin networks responsible for
-  cellular migration have been successfully studied with two-dimensional
-  fluorescence orientation microscopy \cite{mehta2016}. We expect that more
-  conclusions can be drawn using three-dimensional techniques.
+\item Cell migration---the dynamics of actin networks responsible for cellular
+  migration have been successfully studied with two-dimensional fluorescence
+  orientation microscopy \cite{swam}. We expect that more conclusions can be
+  drawn using three-dimensional techniques. Dr. Clare Waterman is a potential
+  collaborator on this project.
+\item Cell growth---the cytoskeleton reorganizes during cell growth and
+  division, and the orientation of septin fibers can report these changes
+  \cite{mehta2016}. The proposed techniques will help biologists understand how
+  cells grow and divide in three dimensions. Dr. Amy Gladfelter is a potential
+  collaborator on this project.
 \item Cellular transport---motor protein dynamics have been studied extensively
   using single-molecule techniques \cite{toprak2006}. Our proposed techniques
   may be able to improve on existing measurements.

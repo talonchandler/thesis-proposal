@@ -84,6 +84,55 @@
       \field{pages}{1676\bibrangedash 1683}
       \range{pages}{8}
     \endentry
+    \entry{chandler17}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ca817a43a6798f657f69b8d86a7e394c}{%
+           family={Chandler},
+           familyi={C\bibinitperiod},
+           given={Talon},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4b6c83c54b055431a9da50f532edff83}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Shalin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=37ce6c04176d0a44d344a61918ddf492}{%
+           family={Shroff},
+           familyi={S\bibinitperiod},
+           given={Hari},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
+           family={Oldenbourg},
+           familyi={O\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ed1e9c5728d61fb0ee066d8e0b0209e1}{%
+           family={La\bibnamedelima Rivi\`{e}re},
+           familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Patrick\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {OSA}%
+      }
+      \strng{namehash}{95a5a8152a617241615d940dc72c78c3}
+      \strng{fullhash}{2b608571007424f4acf803f179ad0e94}
+      \strng{authornamehash}{95a5a8152a617241615d940dc72c78c3}
+      \strng{authorfullhash}{2b608571007424f4acf803f179ad0e94}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Opt. Express}
+      \field{month}{12}
+      \field{number}{25}
+      \field{title}{Single-fluorophore orientation determination with multiview polarized illumination: modeling and microscope design}
+      \field{volume}{25}
+      \field{year}{2017}
+      \field{pages}{31309\bibrangedash 31325}
+      \range{pages}{17}
+      \keyw{Imaging systems; Microscopy; Fluorescence microscopy; Three-dimensional microscopy; Polarization; Polarization-selective devices}
+    \endentry
     \entry{demay2011}{article}{}
       \name{author}{4}{}{%
         {{hash=ad42d673c5a950fb37270a7550d81403}{%
@@ -111,8 +160,8 @@
       \strng{fullhash}{728048915bdc0f54a2289fe54e9967bc}
       \strng{authornamehash}{343401ddb74659ef33c21fe1e840e94e}
       \strng{authorfullhash}{728048915bdc0f54a2289fe54e9967bc}
-      \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Biophys. J.}
@@ -198,8 +247,8 @@
       \strng{fullhash}{7a81e24ae2a0c573609bd53db193b71c}
       \strng{authornamehash}{66565d0ab992b9d552e50ab155678e0d}
       \strng{authorfullhash}{7a81e24ae2a0c573609bd53db193b71c}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nat. Biotechnol.}
@@ -249,8 +298,8 @@
       \strng{fullhash}{46ec586973aa99aa58a5d7e1b8cc6e0f}
       \strng{authornamehash}{9f77a80a85740c10807604d5f76a7398}
       \strng{authorfullhash}{46ec586973aa99aa58a5d7e1b8cc6e0f}
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ACM SIGGRAPH 2006 Papers}
@@ -260,55 +309,6 @@
       \field{pages}{924\bibrangedash 934}
       \range{pages}{11}
       \keyw{deconvolution,light fields,microscopy,synthetic aperture,tomography,volume rendering}
-    \endentry
-    \entry{chandler17}{article}{}
-      \name{author}{5}{}{%
-        {{hash=ca817a43a6798f657f69b8d86a7e394c}{%
-           family={Chandler},
-           familyi={C\bibinitperiod},
-           given={Talon},
-           giveni={T\bibinitperiod}}}%
-        {{hash=4b6c83c54b055431a9da50f532edff83}{%
-           family={Mehta},
-           familyi={M\bibinitperiod},
-           given={Shalin},
-           giveni={S\bibinitperiod}}}%
-        {{hash=37ce6c04176d0a44d344a61918ddf492}{%
-           family={Shroff},
-           familyi={S\bibinitperiod},
-           given={Hari},
-           giveni={H\bibinitperiod}}}%
-        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
-           family={Oldenbourg},
-           familyi={O\bibinitperiod},
-           given={Rudolf},
-           giveni={R\bibinitperiod}}}%
-        {{hash=ed1e9c5728d61fb0ee066d8e0b0209e1}{%
-           family={La\bibnamedelima Rivi\`{e}re},
-           familyi={L\bibinitperiod\bibinitdelim R\bibinitperiod},
-           given={Patrick\bibnamedelima J.},
-           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {OSA}%
-      }
-      \strng{namehash}{95a5a8152a617241615d940dc72c78c3}
-      \strng{fullhash}{2b608571007424f4acf803f179ad0e94}
-      \strng{authornamehash}{95a5a8152a617241615d940dc72c78c3}
-      \strng{authorfullhash}{2b608571007424f4acf803f179ad0e94}
-      \field{sortinit}{8}
-      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Opt. Express}
-      \field{month}{12}
-      \field{number}{25}
-      \field{title}{Single-fluorophore orientation determination with multiview polarized illumination: modeling and microscope design}
-      \field{volume}{25}
-      \field{year}{2017}
-      \field{pages}{31309\bibrangedash 31325}
-      \range{pages}{17}
-      \keyw{Imaging systems; Microscopy; Fluorescence microscopy; Three-dimensional microscopy; Polarization; Polarization-selective devices}
     \endentry
     \entry{schmid}{incollection}{}
       \name{author}{3}{}{%
@@ -361,6 +361,88 @@
       \field{pages}{319\bibrangedash 338}
       \range{pages}{20}
       \keyw{Electroformation,Lipid bilayer,Liposome,Membrane protein,Membrane reconstitution,Protein\x{fffd}\x{fffd}\x{fffd}membrane interaction,Vesicle,Video protocol}
+    \endentry
+    \entry{swam}{article}{}
+      \name{author}{12}{}{%
+        {{hash=22199e5b9f97e398f19ae26b211de840}{%
+           family={Swaminathan},
+           familyi={S\bibinitperiod},
+           given={Vinay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1c8f748e24fc4c31d79b72b20f5bce4e}{%
+           family={Kalappurakkal},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima Mathew},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=18c48853dc0bf8f33fbd5f02087ebbe1}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Shalin\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7d1aa9047136a2d4cfddc77a80c08a4f}{%
+           family={Nordenfelt},
+           familyi={N\bibinitperiod},
+           given={Pontus},
+           giveni={P\bibinitperiod}}}%
+        {{hash=adf74f3ae6ff167cf7eb1ee38bb6764d}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Travis\bibnamedelima I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=4431638a08bb0a5adbb17d1c806d5014}{%
+           family={Koga},
+           familyi={K\bibinitperiod},
+           given={Nobuyasu},
+           giveni={N\bibinitperiod}}}%
+        {{hash=12c11eff1411cec8a8ed44517696f57e}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2f8d1f53c6ca810cf8d25633061aa1bd}{%
+           family={Oldenbourg},
+           familyi={O\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1ec4d05fa592288e2566796e45a3f3bc}{%
+           family={Tani},
+           familyi={T\bibinitperiod},
+           given={Tomomi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=467b18eac603d5cd5e6bf869a1a1054a}{%
+           family={Mayor},
+           familyi={M\bibinitperiod},
+           given={Satyajit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5b54e67bf7317bd5c88a6e475ad579f2}{%
+           family={Springer},
+           familyi={S\bibinitperiod},
+           given={Timothy\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e8cfb6bbb08212aa2d3c22e8cf7ee322}{%
+           family={Waterman},
+           familyi={W\bibinitperiod},
+           given={Clare\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{f7875f6fea53afa8877ee9abd17a0131}
+      \strng{fullhash}{07de9422c6afca1c8bde18e2b1acb704}
+      \strng{authornamehash}{f7875f6fea53afa8877ee9abd17a0131}
+      \strng{authorfullhash}{07de9422c6afca1c8bde18e2b1acb704}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{40}
+      \field{title}{Actin retrograde flow actively aligns and orients ligand-engaged integrins in focal adhesions}
+      \field{volume}{114}
+      \field{year}{2017}
+      \field{pages}{10648\bibrangedash 10653}
+      \range{pages}{6}
     \endentry
     \entry{mehta2016}{article}{}
       \name{author}{8}{}{%
