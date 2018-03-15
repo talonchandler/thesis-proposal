@@ -1,0 +1,35 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{plot coordinates/math parser=false}
+
+\pgfmathdeclarefunction{uwave}{3}{\pgfmathparse{
+    cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(sqrt(#1^2 + #2^2))
+  }}
+\pgfplotsset{
+  /pgfplots/colormap={bwr}{%
+    color(0cm) = (blue);
+    color(1cm) = (white);
+    color(2cm) = (red) }
+}
+
+\begin{document}
+\foreach \iTime in {1,...,30}
+{
+\begin{tikzpicture}
+        \begin{axis} [
+          hide axis,
+          domain=-3:3, view={0}{90},
+          axis background/.style={fill=white}]
+          xmin=-3,xmax=3,
+          ymin=-3,ymax=3,
+          zmin=-3,zmax=3,
+          colormap name=bwr
+          ]
+          \addplot3 [
+          surf, point meta max=5, point meta min=-5, shader=interp, samples=90]
+          { uwave(x, y, \iTime) };
+        \end{axis}
+      \end{tikzpicture}
+    }
+\end{document}

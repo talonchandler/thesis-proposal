@@ -1,0 +1,54 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta}
+\pgfplotsset{plot coordinates/math parser=false}
+
+\pgfmathdeclarefunction{uwave}{3}{\pgfmathparse{
+    #1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2)
+  }}
+\pgfmathdeclarefunction{uwavex}{3}{\pgfmathparse{
+    (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(-#2/(sqrt(#1^2 + #2^2)))
+  }}
+\pgfmathdeclarefunction{uwavey}{3}{\pgfmathparse{
+    (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(#1/(sqrt(#1^2 + #2^2)))
+  }}
+\pgfplotsset{
+  /pgfplots/colormap={bwr}{%
+    color(0cm) = (blue);
+    color(1cm) = (white);
+    color(2cm) = (red) }
+}
+
+\begin{document}
+\foreach \iTime in {1,...,30}
+{
+\begin{tikzpicture}
+        \begin{axis} [
+          hide axis,
+          domain=-3:3, view={0}{90},
+          axis background/.style={fill=white}]
+          xmin=-3,xmax=3,
+          ymin=-3,ymax=3,
+          zmin=-3,zmax=3,
+          colormap name=bwr
+          ]
+          \addplot3 [
+          surf, point meta max=5, point meta min=-5, shader=interp, samples=90]
+          { uwave(x, y, \iTime) };
+
+          
+          \addplot3 [black, samples=20,
+          % point meta={uwave(x, y, \iTime)},
+          % point meta={sqrt(((2/3*x-4/15*x*y)/5)^2+((x*y/5-y)/5)^2)},
+          quiver={%
+            u={uwavex(x,y, \iTime)},
+            v={uwavey(x,y, \iTime)},
+            scale arrows=0.15 
+          },
+          ]
+          {0};
+        \end{axis}
+      \end{tikzpicture}
+    }
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{standalone}
+
+% Setting graphing environment
+\usepackage{pgfplots}
+\pgfplotsset{plot coordinates/math parser=false}
+
+\begin{document}
+
+% declare pgf colormaps:
+\usepgfplotslibrary{colormaps} 
+
+% declare constants:
+\pgfmathsetmacro\kx{2*pi}
+\pgfmathsetmacro\ky{2*pi}
+\pgfmathsetmacro\k{sqrt(\kx^2+\ky^2)}
+
+% declare *functions*: <-- Matthew with his mathematician hat on
+\pgfmathdeclarefunction{rho}{2}{\pgfmathparse{% density
+    (\ky/\k)^2*cos(deg(2*\kx*#1))+(\kx/\k)^2*cos(deg(2*\ky*#2))}}
+\pgfmathdeclarefunction{ux}{2}{\pgfmathparse{% x-velocity
+    -sqrt(2)*(\ky/\k)*cos(deg(\kx*#1))*sin(deg(\ky*#2))}}
+\pgfmathdeclarefunction{uy}{2}{\pgfmathparse{% y-velocity
+    +sqrt(2)*(\kx/\k)*sin(deg(\kx*#1))*cos(deg(\ky*#2))}}
+\pgfmathdeclarefunction{umag}{2}{\pgfmathparse{% velocity magnitude
+    sqrt(ux(#1,#2)^2+uy(#1,#2)^2)}}
+
+\begin{tikzpicture}
+    \begin{axis} [
+            domain=0:1, view={0}{90},
+            axis background/.style={fill=white},
+            colormap/jet, colorbar,
+            xmin=0,xmax=1,
+            ymin=0,ymax=1 
+        ]
+        \addplot3 [
+                surf, shader=interp, samples=10             ]
+            { rho(x,y) };
+
+        \addplot3 [
+                white, -stealth, samples=20,
+                quiver={
+                    u={ux(x,y)/umag(x,y)}, 
+                    v={uy(x,y)/umag(x,y)}, 
+                    w={0}, 
+                    scale arrows=0.1 
+                },
+            ]
+            {umag(x,y)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{document}
