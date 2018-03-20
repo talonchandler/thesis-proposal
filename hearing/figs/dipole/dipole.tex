@@ -2,17 +2,35 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{polar}
 \pgfplotsset{plot coordinates/math parser=false}
 
-\pgfmathdeclarefunction{uwave}{3}{\pgfmathparse{
-    #1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2)
+\pgfmathdeclarefunction{uwaver}{3}{\pgfmathparse{
+    and(#1 > 90, #1 < 270) ?
+    -sin(#1-90)*cos(deg(2*pi*((#3/30) - #2)))/(1+#2^2) :
+    sin(#1-90)*cos(deg(2*pi*((#3/30) - #2)))/(1+#2^2)
   }}
-\pgfmathdeclarefunction{uwavex}{3}{\pgfmathparse{
-    (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(-#2/(sqrt(#1^2 + #2^2)))
+
+\pgfmathdeclarefunction{uwaverr}{3}{\pgfmathparse{
+    sin(#1-90)*cos(deg(2*pi*((#3/30) - #2)))/(1+#2^2)
   }}
-\pgfmathdeclarefunction{uwavey}{3}{\pgfmathparse{
-    (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(#1/(sqrt(#1^2 + #2^2)))
-  }}
+
+% \pgfmathdeclarefunction{uwavex}{3}{\pgfmathparse{
+%     (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(-#2/(sqrt(#1^2 + #2^2)))
+%   }}
+% \pgfmathdeclarefunction{uwavey}{3}{\pgfmathparse{
+%     (#1*cos(deg(2*pi*((#3/30) - sqrt(#1^2 +#2^2))))/(#1^2 + #2^2))*(#1/(sqrt(#1^2 + #2^2)))
+%   }}
+
+\pgfmathdeclarefunction{uwaveu}{3}{\pgfmathparse{
+    atan(uwaverr(#1, #2, #3)/ #2)
+}}
+
+\pgfmathdeclarefunction{uwavev}{3}{\pgfmathparse{
+    sqrt((#2)^2 + (uwaverr(#1, #2, #3))^2) - #2
+}}
+
+
 \pgfplotsset{
   /pgfplots/colormap={bwr}{%
     color(0cm) = (blue);
@@ -23,32 +41,44 @@
 \begin{document}
 \foreach \iTime in {1,...,30}
 {
-\begin{tikzpicture}
-        \begin{axis} [
-          hide axis,
-          domain=-3:3, view={0}{90},
-          axis background/.style={fill=white}]
-          xmin=-3,xmax=3,
-          ymin=-3,ymax=3,
-          zmin=-3,zmax=3,
-          colormap name=bwr
-          ]
-          \addplot3 [
-          surf, point meta max=5, point meta min=-5, shader=interp, samples=90]
-          { uwave(x, y, \iTime) };
 
-          
-          \addplot3 [black, samples=20,
-          % point meta={uwave(x, y, \iTime)},
-          % point meta={sqrt(((2/3*x-4/15*x*y)/5)^2+((x*y/5-y)/5)^2)},
-          quiver={%
-            u={uwavex(x,y, \iTime)},
-            v={uwavey(x,y, \iTime)},
-            scale arrows=0.15 
-          },
-          ]
-          {0};
-        \end{axis}
-      \end{tikzpicture}
-    }
+\begin{tikzpicture}
+  \begin{polaraxis}
+    [
+    hide axis,
+    xmin=0,xmax=360,
+    ymin=0,ymax=3,
+    zmin=-1,zmax=1,
+    ]
+    x
+    \addplot3 [
+    surf, shader=interp, domain=0:360, domain y=0:3,
+    samples=50, point meta max=1, point meta min=-1]
+    {uwaver(x, y, \iTime)};
+
+    \addplot[black,
+    quiver={u=\thisrow{u},v=\thisrow{v}},
+    -stealth]
+    table[row sep=crcr]
+    { x y u v\\
+      0 0.5 {uwaveu(0, 0.5, \iTime)} {uwavev(0, 0.5, \iTime)}\\
+      0 1 {uwaveu(0, 1, \iTime)} {uwavev(0, 1, \iTime)}\\
+      0 1.5 {uwaveu(0, 1.5, \iTime)} {uwavev(0, 1.5, \iTime)}\\      
+      0 2 {uwaveu(0, 2, \iTime)} {uwavev(0, 2, \iTime)}\\
+      0 2.5 {uwaveu(0, 2.5, \iTime)} {uwavev(0, 2.5, \iTime)}\\
+      135 0.5 {uwaveu(135, 0.5, \iTime)} {uwavev(135, 0.5, \iTime)}\\
+      135 1 {uwaveu(135, 1, \iTime)} {uwavev(135, 1, \iTime)}\\
+      135 1.5 {uwaveu(135, 1.5, \iTime)} {uwavev(135, 1.5, \iTime)}\\      
+      135 2 {uwaveu(135, 2, \iTime)} {uwavev(135, 2, \iTime)}\\
+      135 2.5 {uwaveu(135, 2.5, \iTime)} {uwavev(135, 2.5, \iTime)}\\
+    };
+
+    % Labels
+    \node[] at (0, {10*cos(deg(2*pi*\iTime/30))}) {\Large +};
+    \node[] at (0, {-10*cos(deg(2*pi*\iTime/30))}) {\Large --};
+
+  \end{polaraxis}
+\end{tikzpicture}
+}
 \end{document}
+
